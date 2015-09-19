@@ -1,0 +1,18 @@
+Which means you'll have to manually install popular middleware like body-parser. Also, Express 4 introduces mini-routers, allowing us to have separate configurations mapping to different routes. Check out how the server is organized and read the comments in server/server.js to get a feel for it.
+
+links.js: Implement links controller methods: 
+  //save links
+  //fetch links
+  //nav to link
+
+services.js: Call links controller methods for Get and post request: 
+  //save links
+  //fetch links
+  //nav to link
+  
+shorten.js: 
+  //create function for shortening links
+
+index.html:
+  //add save link and shorten link to ng-click directive
+  

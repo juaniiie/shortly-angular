@@ -1,4 +1,4 @@
-describe('AuthController', function () {
+xdescribe('AuthController', function () {
   var $scope, $rootScope, $location, $window, $httpBackend, createController, Auth;
 
   // using angular mocks, we can inject the injector
@@ -35,11 +35,11 @@ describe('AuthController', function () {
     $window.localStorage.removeItem('com.shortly');
   });
 
-  it('should have a signup method', function () {
+  xit('should have a signup method', function () {
     expect($scope.signup).to.be.a('function');
   });
 
-  it('should store token in localStorage after signup', function () {
+  xit('should store token in localStorage after signup', function () {
     // create a fake JWT for auth
     var token = 'sjj232hwjhr3urw90rof';
 
@@ -50,11 +50,11 @@ describe('AuthController', function () {
     expect($window.localStorage.getItem('com.shortly')).to.be(token);
   });
 
-  it('should have a signin method', function () {
+  xit('should have a signin method', function () {
     expect($scope.signin).to.be.a('function');
   });
 
-  it('should store token in localStorage after signin', function () {
+  xit('should store token in localStorage after signin', function () {
     // create a fake JWT for auth
     var token = 'sjj232hwjhr3urw90rof';
     $httpBackend.expectPOST('/api/users/signin').respond({token: token});
