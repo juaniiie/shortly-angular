@@ -14,21 +14,22 @@ angular.module('shortly.links', [])
   //save links
 
   $scope.saveLinks = function () {
-    
+
 
 
   };
   //fetch links
   $scope.getLinks = function () {
-   //references all links in linkController.js
-   console.log('============getlinks CAlled=======');
-    Links.getLinks($scope.data)
-    .then(function () {
-      $location.path('/links');
-    })
-    .catch(function (error) {
+    //references all links in linkController.js
+    //what is Link.getLinks() evaluating to and why
+    Links.getLinks()
+      .then(function (links) {
+        $scope.data.links = links;
+      })
+      .catch(function (error) {
         console.error(error);
       });
   };
   //nav to links
+  $scope.getLinks();
 });
