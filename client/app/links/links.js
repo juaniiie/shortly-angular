@@ -4,18 +4,9 @@ angular.module('shortly.links', [])
   // Your code here
   $scope.data = {
     links: []
-    // url: '',
-    // base_url: '',
-    // code: '',
-    // title: '',
-    // visits: ''
   };
-  // $scope.Links = [];
-  //save links
 
   $scope.saveLinks = function () {
-
-
 
   };
   //fetch links

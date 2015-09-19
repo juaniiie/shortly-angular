@@ -5,21 +5,24 @@ angular.module('shortly.services', [])
   //ROBERT: call functions from links controller for GET/POST requests such as
   //save links
 
-  var saveLinks = function (link) {
+  var saveLinks = function () {};
+
+  var addLink = function (link) {
     return $http({
       method: 'POST',
-      url: '/',
+      url: '/api/links',
       data: link
-
-    });
-
+    })
+    .then(function (resp) {
+        return resp.data;
+      });
   };
   //fetch links
   //nav to link
   var getLinks = function () {
     return $http({
         method: 'GET',
-        url: '/api/links' 
+        url: '/api/links'
       })
       .then(function (resp) {
         return resp.data;
@@ -27,7 +30,8 @@ angular.module('shortly.services', [])
   };
   return {
     getLinks: getLinks,
-    saveLinks: saveLinks
+    saveLinks: saveLinks,
+    addLink: addLink
   };
 })
 
