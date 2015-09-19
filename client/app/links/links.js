@@ -15,7 +15,16 @@ angular.module('shortly.links', [])
     //what is Link.getLinks() evaluating to and why
     Links.getLinks()
       .then(function (links) {
-        $scope.data.links = links;
+
+        $scope.data.links = [{
+            visits: 1000,
+            link: 'www.word.com',
+            title: 'Best site ever',
+            code: 'xjyz8',
+            base_url: 'http://localhost:3000',
+            url: 'http://www.word.com'
+        }];
+        console.log($scope.data);
       })
       .catch(function (error) {
         console.error(error);

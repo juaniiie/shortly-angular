@@ -7,19 +7,16 @@
   </head>
   <body>
     <h1>Shortly</h1>
+    <nav>
+        <ul class="navigation">
+          <li><a href="#/links">Links</a></li>
+          <li><a href="#/shorten">Shorten</a></li>
+        </ul>
+      </nav>
 
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
     <div ng-view>
-    <nav>
-      <ul class="navigation">
-        <li><a href="">Links</a></li>
-        <li><a href="">Shorten</a></li>
-      </ul>
-    </nav>
-    <input type="text" ng-model="link" required></input>
-    <button value="add" ng-click=""></input>
-    
-
+      
     </div>
 
     <script src="lib/angular/angular.js"></script>
