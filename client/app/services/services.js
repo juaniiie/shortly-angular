@@ -1,10 +1,6 @@
 angular.module('shortly.services', [])
 
 .factory('Links', function ($http, $location, $window) {
-  // Your code here
-  //ROBERT: call functions from links controller for GET/POST requests such as
-  //save links
-
   var saveLinks = function () {
   };
 
@@ -15,18 +11,16 @@ angular.module('shortly.services', [])
       data: link
     })
     .then(function (resp) {
-        $location.path('/links');
         return resp.data;
       });
   };
-  //fetch links
-  //nav to link
   var getLinks = function () {
     return $http({
         method: 'GET',
         url: '/api/links'
       })
       .then(function (resp) {
+
         return resp.data;
       });
   };

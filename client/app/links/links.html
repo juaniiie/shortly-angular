@@ -1,13 +1,13 @@
 <div id='container'>
   <!-- Your html here -->
-  <input type="text" placeholder="filter"></input>
+  <input type="text" ng-model="search" placeholder="filter"></input>
   <table ng-controller="LinksController">
-    <tr class="link" ng-repeat="link in data.links">
+    <tr class="link" ng-repeat="link in data.links | filter:search | orderBy:'-visits'">
       <td><img src="../assets/redirect_icon.png"/></td>
       <td><ul>
             <li>{{link.title}}</li>
             <li>{{link.url}}</li>
-            <li><a href="{{link.url}}">{{link.url}}/{{link.code}}</a></li><!--MAYbe link with code should be the href-->
+            <li><a href="/api/links/{{link.code}}">{{link.base_url}}/{{link.code}}</a></li>
           </ul>
     </td>
       <td><ul><li class="visits">Visits</li><li class="link visits count">{{link.visits}}</li></ul></td>
